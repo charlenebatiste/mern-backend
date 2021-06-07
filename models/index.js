@@ -5,6 +5,7 @@ mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: true,
+    useCreateIndex: true,
 });
 
 const db = mongoose.connection;
@@ -20,11 +21,12 @@ db.on('error', (error) => {
 })
 
 // import all models below
-
 const User = require('./User')
+const Book = require('./Book')
 
 // export all models from this file
 
 module.exports = {
-    User
+    User,
+    Book
 }
