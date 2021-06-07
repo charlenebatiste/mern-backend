@@ -9,6 +9,9 @@ const JWT_SECRET = process.env.JWT_SECRET;
 
 // Models
 
+const { User } = require('../models')
+// will lokk at index.js file to find location of User model
+
 // controllers
 const test = async (req, res) => {
     res.json({ message: 'User endpoint OK!' });
